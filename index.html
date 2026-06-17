@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mamadou Bassirou Diallo. Data Science and AI Engineering portfolio: production-shaped ML and multi-agent LLM systems, documented honestly. M.S. Business Analytics + AI at UT Dallas (May 2027).">
+  <meta name="author" content="Mamadou Bassirou Diallo">
+
+  <!-- Open Graph: how the site previews when shared on LinkedIn / Slack / etc. -->
+  <meta property="og:title" content="Mamadou Bassirou Diallo · Portfolio">
+  <meta property="og:description" content="Data Science · AI Engineering · M.S. Business Analytics + AI at UT Dallas (May 2027). Three eval-validated agentic systems, six end-to-end projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bass990.github.io">
+  <meta property="og:image" content="https://bass990.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bass990.github.io/og-image.png">
+
+  <title>Mamadou Bassirou Diallo · Data Science & AI Engineering</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">MBD</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Data Science · AI Engineering · Product Analytics</p>
+      <h1 class="hero-title">Mamadou Bassirou Diallo</h1>
+      <p class="hero-sub">
+        I build production-shaped ML and AI systems, then run the eval harness that could kill my own favorite feature.
+        <strong>Three agentic systems, all eval-validated.</strong> Six end-to-end repos, all public.
+      </p>
+      <p class="hero-meta">
+        M.S. Business Analytics + AI · UT Dallas · May 2027 · Dallas-Fort Worth · Seeking Summer 2027 internships
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">See the work</a>
+        <a class="btn btn-ghost" href="https://github.com/bass990" target="_blank" rel="noopener">GitHub →</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/mamadou9905" target="_blank" rel="noopener">LinkedIn →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Projects -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Six Shipped Projects</h2>
+      <p class="section-desc">
+        Every project ships with a portfolio-grade README that includes an explicit
+        <strong>Honest Disclosure</strong> section: what works, what doesn't,
+        and what I'd want before deploying for real.
+      </p>
+
+      <div class="project-grid">
+
+        <!-- Project 1: ChainPilot -->
+        <article class="project-card">
+          <header class="project-header">
+            <h3 class="project-title">ChainPilot</h3>
+            <p class="project-tag">AI Engineering · Multi-Agent · Decision Support</p>
+          </header>
+          <p class="project-blurb">
+            A 1-orchestrator + 6-specialist supply-chain decision system with
+            <strong>adversarial deliberation</strong> (Advocate ⚔ Skeptic ⚔ Arbiter)
+            and asymmetric trust calibration (2.5x penalty:reward).
+            <strong>Eval-validated at 204 pipeline runs, replicated across two independent runs</strong>
+            ($3.93-3.95 LLM cost per run). The eval surfaced three findings I shipped
+            instead of hiding: the deliberation layer cost 16.7pp of strict accuracy on
+            decisive cases (Clear-Act 0% full vs 40% stripped); supplier-name prompt
+            injection slipped through 3/3 reps on the targeted scenario; and the FULL
+            pipeline's swing_condition output collapsed to multi-paragraph prose (0% in
+            the operationally-useful 5-30 word range vs 97% for stripped). Where
+            deliberation earns its cost: Ambiguous tier (+33.3pp). All three drove
+            architecture changes. FastAPI + React + SSE.
+          </p>
+          <p class="project-stack">
+            <span class="chip">Python</span>
+            <span class="chip">Anthropic SDK</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">React</span>
+            <span class="chip">SSE</span>
+            <span class="chip">Multi-Agent</span>
+            <span class="chip">Eval Harness</span>
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/bass990/chainpilot" target="_blank" rel="noopener">GitHub →</a>
+            <span class="link-sep">·</span>
+            <a href="https://github.com/bass990/chainpilot/blob/main/docs/ARCHITECTURE.md" target="_blank" rel="noopener">Architecture deep-dive →</a>
+          </p>
+        </article>
+
+        <!-- Project 2: TriageIQ -->
+        <article class="project-card">
+          <header class="project-header">
+            <h3 class="project-title">TriageIQ</h3>
+            <p class="project-tag">AI Engineering · Multi-Agent · Healthcare</p>
+          </header>
+          <p class="project-blurb">
+            A 5-agent ER triage decision-support system producing ESI 1-5 recommendations
+            with action checklists in about 4 seconds. <strong>Tiered model routing</strong>:
+            three parallel specialists on Claude Haiku for cost and speed (about $0.10 per
+            patient), synthesis on Sonnet for the cross-evidence reasoning. The nurse keeps
+            final authority by architecture, not by disclaimer: no actuation surface exists.
+            Mock data only; not clinically validated, and labeled as such everywhere.
+          </p>
+          <p class="project-blurb">
+            <strong>Eval-validated at 630 LLM calls</strong> across 30 scenarios x 5 tiers
+            (180 scored runs, $6.07, 0 errors). <strong>Critical-miss rate = 0% on BOTH branches</strong>
+            — neither the 4-specialist architecture nor a single-Sonnet baseline missed
+            a single high-acuity patient across 5 atypical critical_miss_test scenarios
+            (silent MI, posterior stroke, occult sepsis, PE-with-normal-SpO2, slow-leak AAA)
+            nor any of 6 adversarial scenarios (including 2 prompt-injection vectors —
+            both resisted 3/3 reps). But per-metric divergence: <strong>STRIPPED beats FULL
+            by +20.2pp on care-area accuracy</strong>; FULL beats STRIPPED by +12.7pp on
+            critical-flag enumeration. Recommended collapsing to single-Sonnet for production:
+            the specialist pipeline is SAFE but does not earn its 4-extra-LLM-call complexity
+            on accuracy.
+          </p>
+          <p class="project-stack">
+            <span class="chip">Python</span>
+            <span class="chip">Anthropic SDK</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Pydantic v2</span>
+            <span class="chip">SSE</span>
+            <span class="chip">Healthcare AI</span>
+            <span class="chip">Eval Harness</span>
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/bass990/triageiq" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </article>
+
+        <!-- Project 3: ClauseGuard -->
+        <article class="project-card">
+          <header class="project-header">
+            <h3 class="project-title">ClauseGuard</h3>
+            <p class="project-tag">AI Engineering · Agentic · Legal Tech</p>
+          </header>
+          <p class="project-blurb">
+            A two-tool contract-conflict agent: extract clauses from two contract PDFs,
+            then generate a risk-ranked redline brief in a strict
+            <strong>10-field schema</strong> with four severity tiers, streamed live over
+            SSE so the reviewer watches the analysis assemble. Defensive caps (120 clauses,
+            10MB uploads, 32K output tokens) bound the worst case at about $0.10 per brief.
+            Advice to counsel, never an executed amendment.
+          </p>
+          <p class="project-blurb">
+            <strong>Eval-validated at 180 scored runs</strong> across 30 scenarios x 5 tiers
+            (clear_conflict, clear_no_conflict, ambiguous, severity_tiering, adversarial).
+            Aggregate F1 equivalent FULL vs STRIPPED single-prompt baseline (-2.1pp), but
+            per-tier divergent: agentic loop wins severity_tiering by +10.7pp F1 (cleaner
+            risk-tier decisions), loses ambiguous tier by -13.0pp F1 (extra reasoning
+            amplifies false-positive tendency). Both branches resisted prompt injection
+            planted in clause text and section headers. RUBRIC.md committed before any
+            scenario was labeled; deterministic scorers, no LLM-as-judge.
+          </p>
+          <p class="project-stack">
+            <span class="chip">Python</span>
+            <span class="chip">Anthropic SDK</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">React</span>
+            <span class="chip">PyMuPDF</span>
+            <span class="chip">SSE</span>
+            <span class="chip">Eval Harness</span>
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/bass990/clauseguard" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </article>
+
+        <!-- Project 4: SBA Loan Default (live deploy, featured) -->
+        <article class="project-card project-card-featured">
+          <header class="project-header">
+            <h3 class="project-title">SBA Loan Default Classifier</h3>
+            <p class="project-tag">Data Science · ML Engineering · <span class="badge-live">Live Deploy</span></p>
+          </header>
+          <p class="project-blurb">
+            A production XGBoost classifier for U.S. SBA loan default risk on 890K loans.
+            31 engineered features, Optuna tuning, <strong>AUCPR 0.5665</strong> (3.1x over
+            the 0.18 random baseline) at a frozen F1-optimal threshold. SHAP, permutation,
+            and surrogate-tree interpretability built for loan officers, with an ECOA-aware
+            production-readiness brief. Live Gradio app on Hugging Face Spaces.
+          </p>
+          <p class="project-stack">
+            <span class="chip">Python</span>
+            <span class="chip">XGBoost</span>
+            <span class="chip">SHAP</span>
+            <span class="chip">Optuna</span>
+            <span class="chip">Gradio</span>
+            <span class="chip">Hugging Face</span>
+          </p>
+          <p class="project-links">
+            <a class="link-strong" href="https://huggingface.co/spaces/bass990/SBA-Loan-Default-Prediction" target="_blank" rel="noopener">🟢 Live demo →</a>
+            <span class="link-sep">·</span>
+            <a href="https://github.com/bass990/sba-loan-default-prediction" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </article>
+
+        <!-- Project 5: Stack Overflow Causal Retention -->
+        <article class="project-card">
+          <header class="project-header">
+            <h3 class="project-title">Stack Overflow Retention, a Causal Study</h3>
+            <p class="project-tag">Data Science · Causal Inference · Product Analytics</p>
+          </header>
+          <p class="project-blurb">
+            Does a fast first answer cause new contributors to stay? Four estimators
+            (controlled OLS, IPW, propensity stratification, 2SLS) on
+            <strong>1.77M users</strong> converge on a <strong>+7.7pp D30 retention
+            effect</strong>. The instrumental variable diverged, and I disqualified it
+            publicly with the reasoning written out rather than burying it. The full
+            BigQuery pipeline scanned 44 GB and cost $0.22. Ships with robustness checks,
+            per-segment heterogeneity, a Streamlit dashboard, and a PM-facing one-pager.
+          </p>
+          <p class="project-stack">
+            <span class="chip">BigQuery</span>
+            <span class="chip">Python</span>
+            <span class="chip">statsmodels</span>
+            <span class="chip">Causal Inference</span>
+            <span class="chip">Streamlit</span>
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/bass990/stackoverflow-causal-retention" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </article>
+
+        <!-- Project 6: NBA Contract Value -->
+        <article class="project-card">
+          <header class="project-header">
+            <h3 class="project-title">NBA Contract Value Analyzer</h3>
+            <p class="project-tag">Data Science · Regression · Time-Series CV</p>
+          </header>
+          <p class="project-blurb">
+            A LightGBM model predicting market salary from on-court production, with
+            <strong>time-series cross-validation</strong> (train 2022-2024, test 2025
+            untouched) to prevent salary-cap leakage. The README leads with the honest
+            data disclosure: a ~75-row hand-curated real salary set, because the
+            comprehensive sources are Cloudflare-gated and I refused to scrape against
+            their terms, plus a 1,400-row synthetic path for reproducibility.
+            15 pytest tests + GitHub Actions CI.
+          </p>
+          <p class="project-stack">
+            <span class="chip">Python</span>
+            <span class="chip">LightGBM</span>
+            <span class="chip">Optuna</span>
+            <span class="chip">Streamlit</span>
+            <span class="chip">pytest</span>
+            <span class="chip">GitHub Actions</span>
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/bass990/nba-contract-value" target="_blank" rel="noopener">GitHub →</a>
+          </p>
+        </article>
+
+      </div>
+
+      <p class="more-projects">
+        All six repos, with tests, CI, and honest-disclosure READMEs, live on
+        <a href="https://github.com/bass990" target="_blank" rel="noopener">my GitHub</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section-alt" id="about">
+    <div class="section-inner about-inner">
+      <h2 class="section-title">About</h2>
+      <p>
+        I'm finishing my <strong>M.S. in Business Analytics and Artificial Intelligence</strong>
+        at UT Dallas, expected May 2027. Before that I completed a B.S. in AI Engineering
+        and Management Information Systems at Sahmyook University in Seoul, taught in
+        Korean, my third language. The portfolio above is what I've built alongside
+        coursework: production-shaped systems chosen to demonstrate the kind of judgment
+        a junior engineer can actually have before holding the job title.
+      </p>
+      <p>
+        The discipline I hold every project to is honest disclosure: not just what shipped,
+        but where it would break, what's missing for production, and where the methodology
+        could be wrong. My favorite finding in the whole portfolio came from the ChainPilot eval:
+        a 204-run harness, replicated across two independent runs, showed the adversarial-deliberation
+        layer I designed was costing 16.7pp of accuracy on decisive cases. I shipped the finding
+        and redesigned the architecture around the one tier where deliberation actually earned its cost
+        (+33.3pp on ambiguous cases). All three agentic systems in the portfolio now ship with their
+        own eval harness, and each one recommends a specific simplification of the architecture it tests.
+      </p>
+      <p>
+        Languages: English (fluent), French (native), Korean (fluent), Spanish (basic).
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-inner contact-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-lead">
+        <strong>Fastest reply</strong> is a LinkedIn DM. Email also works.
+        For role-specific outreach, include the role title and the posting link
+        so I can read it before we talk.
+      </p>
+
+      <div class="contact-block">
+        <p class="contact-label">Quick response</p>
+        <ul class="contact-links">
+          <li><a href="https://linkedin.com/in/mamadou9905" target="_blank" rel="noopener">LinkedIn DM</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-block">
+        <p class="contact-label">Email</p>
+        <ul class="contact-links">
+          <li><a href="mailto:bassiroudiallo1305@gmail.com">bassiroudiallo1305@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="contact-block">
+        <p class="contact-label">Code</p>
+        <ul class="contact-links">
+          <li><a href="https://github.com/bass990" target="_blank" rel="noopener">github.com/bass990</a></li>
+        </ul>
+      </div>
+
+      <p class="contact-note">
+        Resume is role-tailored per posting; ask via LinkedIn or email and I'll send the version that fits.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 Mamadou Bassirou Diallo · <a href="https://github.com/bass990/bass990.github.io" target="_blank" rel="noopener">View source</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
